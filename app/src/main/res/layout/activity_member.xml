@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_member"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.bitengine.wdproject.MemberActivity">
+
+    <TextView
+            android:text="Team Search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/member_title"
+            android:textAppearance="@android:style/TextAppearance.Material.Headline" android:layout_marginBottom="8dp"/>
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp" android:id="@+id/member_hor_divider" android:layout_below="@+id/member_title"
+            android:background="@android:color/darker_gray">
+
+    </FrameLayout>
+    <TextView
+            android:text="Select the group you want to join. A team leader must accept your request in order to join a group."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/member_description"
+            android:textAppearance="@android:style/TextAppearance.Material.Notification"
+            android:layout_below="@+id/member_hor_divider" android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+    <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/member_group_list"
+            android:layout_below="@+id/member_description" android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"/>
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_below="@+id/member_description"
+            android:id="@+id/member_list_empty" android:visibility="visible">
+
+        <TextView
+                android:text="No Teams Available"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_gravity="center_vertical"
+                android:textAppearance="@android:style/TextAppearance.Material.Title" android:textAlignment="center"
+                android:textColor="@android:color/darker_gray"/>
+    </FrameLayout>
+</RelativeLayout>

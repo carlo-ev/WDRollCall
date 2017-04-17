@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_white_ui_clickable" android:padding="4dp">
+
+    <ImageView
+            app:srcCompat="?android:attr/actionModeSelectAllDrawable"
+            android:layout_width="@dimen/peer_item_logo_size"
+            android:layout_height="@dimen/peer_item_logo_size" android:layout_marginRight="8dp"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/peer_item_name"
+            android:layout_weight="1" android:layout_gravity="center_vertical" android:textStyle="bold"
+            android:textSize="18sp"/>
+    <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp" app:srcCompat="@android:drawable/ic_menu_send"
+    />
+</LinearLayout>

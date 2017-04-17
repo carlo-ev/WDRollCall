@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.bitengine.wdproject.MainActivity">
+
+    <TextView
+            android:text="In order to join or create groups you must activate your wifi connection and have Wifi-Direct available. Select your role below:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/main_description"
+            android:textAppearance="@android:style/TextAppearance.Material.Subhead"/>
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp" android:background="@android:color/darker_gray"
+            android:layout_below="@+id/main_description" android:id="@+id/peer_list_hor_divider" android:layout_marginTop="8dp">
+
+    </FrameLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_below="@+id/peer_list_hor_divider">
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp" android:layout_weight="1">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_gravity="center_vertical">
+                <TextView
+                        android:text="Team Name:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@android:style/TextAppearance.Material.Medium"/>
+                <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/main_team_name" android:hint="Insert Team Name Here"/>
+                <Button
+                        android:text="Create Team"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:drawableStart="@android:drawable/ic_menu_myplaces" android:onClick="goToLeaderScreen"
+                        android:layout_marginTop="8dp"/>
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp" android:layout_weight="1">
+
+            <Button
+                    android:text="Team Member"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:drawableStart="@android:drawable/ic_menu_edit" android:onClick="goToMemberScreen"/>
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>
